@@ -92,9 +92,7 @@ const App: React.FC = () => {
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Name'/>
         <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} placeholder='Url'/>
           <Button onPress={() => addData()} title="Add new Item"></Button>
-      {/* <button type="button" onClick={() => addData()}>Submit</button> */}
         </form>
-        {/* <button onClick={() => setExercise(pickRandomExercise)}>Get random exercise!</button> */}
         <Button onPress={() => setExercise(pickRandomExercise)} title="Get random exercise!" />
         <div>
        <p>{exercise.title}</p>
@@ -103,8 +101,6 @@ const App: React.FC = () => {
         {data.map((item) => (
           <li key={item.id}>
             <Card title={item.title} url={item.url} onPress={() => deleteData(item.id)}/>
-            {/* <DeleteButton onPress={() => deleteData(item.id)} /> */}
-            {/* <button onClick={() => deleteData(item.id)}>Delete</button> */}
           </li>
         ))}
       </ul>
